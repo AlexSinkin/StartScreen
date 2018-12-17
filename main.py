@@ -1,4 +1,3 @@
-import sys
 from tkinter import *
 from tkinter.font import Font
 from PIL import Image, ImageTk
