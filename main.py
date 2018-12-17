@@ -10,11 +10,11 @@ def start_callback():
 def help_callback():
     help_window = Toplevel(root)
     help_window.geometry("400x400")
-#    help_window.tk.call('encoding', 'system', 'utf-8')
+    text = Text(help_window, width=100, height=100, font=Font(family='Helvetica', size=10))
+    text.pack(expand='yes', fill='both')
+
     with open("game_rules.txt", mode="r", encoding="utf-8") as f:
-        text = Text(help_window, width=100, height=100, font=Font(family='Helvetica', size=10))
         text.insert(END, f.read())
-        text.pack(expand='yes', fill='both')
 
     Button(help_window, text='OK', command=help_window.destroy).pack(side=BOTTOM, pady=30)
     return
